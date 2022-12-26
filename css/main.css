@@ -146,12 +146,17 @@ main {
 #work {
     width: 100%;
     margin-bottom: 20px;
-    display: flex;
 }
 
-#work > h2 {
-
+.projects {
+    width: 80%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
+.project {
+}
 
 /*** CONTACT ***/
