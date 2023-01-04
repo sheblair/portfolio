@@ -10,12 +10,12 @@
 }
 
 body {
-    color: #2b2b2b;
+    color: #232040;
     text-transform: lowercase;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     padding: 30px;
-    background-color: beige;
+    background-color: rgb(246, 246, 229);
 }
 
 .heading {
