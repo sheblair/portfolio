@@ -6,6 +6,8 @@
         <title>portfolio</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="./index.js" defer></script>
+        <script src="https://kit.fontawesome.com/fb23e24526.js" crossorigin="anonymous"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
     <body>
         <header>    
         <h1>sheila blair</h1>
-    <!----Navigation Bar---->
+    <!-- nav bar -->
         <nav>
             <ul>
                 <li><a href="#about">about</a></li>
@@ -28,101 +30,134 @@
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>    
-    <!---- maybe add a salutation here? ---->        
         </header>
 
         <main>
-    <!----About Me---->
-            <section id="about">
-                <article class="about-me">
-                    <h2 class="heading">hi! i'm a front-end developer who wants to work with you ☻</h2>
-                    <p>as a developer, my priorities are <span class="italic">clarity and
-                        consistency</span>. like many millennials, i first experimented 
-                        with coding while editing myspace pages and tumblr themes back in the early aughts.
-                        since then, i've picked up frontend programming as a professional skillset, building
-                        both static sites as well as robust and interactive web applications. 
-                    </p>
-                    <p>previous hats i've worn include restaurant staff, nonprofit program assistant, 
-                        student of cultural anthropology, and historian-in-training. i'm passionate about
-                        <span class="italic">community, sustainability, and memory</span>, and when i'm online, you can usually
-                        find me combing through <a href="https://www.are.na/66-99" target="_blank">are.na</a>.
-                    </p>
-                    <p>i combine technological skill and humanistic inquiry to navigate both cultural frameworks and 
-                        frontend frameworks with ease. along with excellent communication skills and
-                        fine-tuned attention to detail, i add context and clarity to any project.
-                    </p>
-                    <p>below you'll find some of my favorite things
-                        i've built so far. if you have any questions or comments, please reach out! i love to receive feedback,
-                        make new connections, or hear about what you're working on.
-                    </p>
-                </article>
-                <aside class="profile-image">
-                    <img src="./img/reflection-1-crop.png" alt="AI generated avatar of site creator" />
-                    <p class="profile-image-caption">the author as a computer-generated avatar</p>
-                    <aside class="skills">
-                        <h4 class="skills-title">tech stack</h4>
-                        <ul class="skills-list">
-                            <li class="skills-list-item">React</li>
-                            <li class="skills-list-item">JavaScript</li>
-                            <li class="skills-list-item">HTML & CSS</li>
-                            <li class="skills-list-item">Git / CLI</li>
-                        </ul>
-                        <!-- <hr class="skills-divider">
-                        <h4 class="skills-title">learning</h4>
-                        <ul class="skills-list">
-                            <li class="skills-list-item">---</li>
-                        </ul> -->
-                    </aside>
-                </aside>
-                
-            </section>
-            
-    <!----Work--->
-            <section id="work">
-                <h2 class="heading">check out my projects</h2>
-                <section class="projects">
-                    <article class="project">
-                        <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a sticky notes web application" />
-                        <h4 class="project-title"><a href="" class="project-link">Sticky Notes</a></h4>
-                        <p class="project-info">React</p>
-                    </article>
-                    <article class="project">
-                        <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a hotels search feature" />
-                        <h4 class="project-title"><a href="" class="project-link">Hotels Search</a></h4>
-                        <p class="project-info">React</p>
-                    </article>
-                    <article class="project">
-                        <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a Guess the Word game homepage" />
-                        <h4 class="project-title"><a href="" class="project-link">Guess the Word</a></h4>
-                        <p class="project-info">Vanilla JavaScript</p>
-                    </article>
-                    <article class="project">
-                        <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a website for signing up to a work retreat" />
-                        <h4 class="project-title"><a href="" class="project-link">Unplugged</a></h4>
-                        <p class="project-info">HTML, CSS, and vanilla Javascript</p>
+            <section class="top-section">
+                <!-- about -->
+                <section class="about">
+                    <article class="about-me">
+                        <h2 class="heading">hi! i'm a front-end developer who wants to work with you ☻</h2>
+                        <p>like many millennials, i first experimented with coding while editing myspace pages 
+                            and tumblr themes back in the early aughts. since then, i've picked up front-end 
+                            programming as a professional skillset, building both static sites as well as robust 
+                            and interactive web applications. i love the way programming combines creativity and 
+                            logic and as a developer, my priorities are always <span class="italic">clarity and consistency.</span>
+                        </p>
+                        <p>i'm curious and passionate about using digital technology to create sustainable communities.
+                            when i’m not coding, you can usually find me walking around the city with a coffee, reading 
+                            a library book, or combing through <a href="https://www.are.na/66-99" target="_blank">are.na</a>.
+                        </p>
+                        <p>below you'll find some of my favorite things
+                            i've built so far. if you have any questions or comments, please reach out! i love to receive feedback,
+                            make new connections, or hear about what you're working on.
+                        </p>
                     </article>
                 </section>
-            </section>
 
-    <!----Contact---->
-            <footer id="contact">
-                <h2 class="heading">Like what you see?</h2>
-                <h3 id="email-header" class="heading">Let's meet for a cup of coffee.</h3>
-                    <a href="mailto:hi@jubileeausten.com">
-                        <img src="img/envelope.png" alt="Envelope icon" id="envelope"/>hi [@] jubileeausten.com
-                    </a>
-                <h3 id="socialmedia-header" class="heading">Or, find me on the interwebs.</h3>
-                    <ul>
-                        <li><a href="https://www.twitter.com/" target="_blank"><img src="img/twitter.png" alt="Twitter Icon"/></a></li>
-                        <li><a href="https://www.tumblr.com/" target="_blank"><img src="img/tumblr.png" alt="Tumblr Icon"/></a></li>
-                        <li><a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram Icon"/></a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank"><img src="img/linkedin.png"  alt="LinkedIn Icon"/></a></li>
-                        <li><a href="https://www.github.com/" target="_blank"><img src="img/github.png" alt="Github Icon"/></a></li>
-                    </ul>
-            </footer>
+                <!-- profile -->
+                <section class="profile">
+                    <img src="./img/reflection-1-crop.png" alt="Profile picture of site creator" />
+                    <aside class="skills">
+                        <section class="skills-section">
+                            <h4 class="skills-title">skills</h4>
+                            <ul class="skills-list">
+                                <li class="skills-list-item">HTML & CSS</li>
+                                <li class="skills-list-item">SASS</li>
+                                <li class="skills-list-item">React</li>
+                                <li class="skills-list-item">JavaScript</li>
+                                <li class="skills-list-item">Git / CLI</li>
+                                <li class="skills-list-item">Version Control</li>
+                                <li class="skills-list-item">Flexbox & Grid</li>
+                            </ul>
+                        </section>
+                        <section class="skills-section">
+                            <h4 class="skills-title">tools</h4>
+                            <ul class="skills-list">
+                                <li class="skills-list-item">Github</li>
+                                <li class="skills-list-item">Figma</li>
+                                <li class="skills-list-item">Netlify</li>
+                                <li class="skills-list-item">Vite</li>
+                                <li class="skills-list-item">Chrome DevTools</li>
+                                <li class="skills-list-item">Visual Studio Code</li>
+                                <li class="skills-list-item">Code Sandbox</li>
+                            </ul>
+                        </section>
+                        <!-- <section class="skills-section">
+                            <h4 class="skills-title">favorites</h4>
+                            <ul class="skills-list">
+                                <li class="skills-list-item">fave color</li>
+                            </ul>
+                        </section> -->
+                    </aside>
+                </section>
+            </section>
+                
+                <!-- projects -->
+                <section class="projects-main">
+                    <h2 class="projects-heading">projects:</h2>
+
+                    <section class="projects">
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h4 class="title">
+                                    <span>Sticky Notes</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </h4>
+                                <div id="content">
+                                    <img src="./img/sticky-notes-shrek.png" class="project-img" alt="Screenshot of a sticky notes web application" />
+                                    <a href="https://stickynotes-sb.netlify.app" class="project-link">Live Site</a>
+                                    <a href="https://github.com/sheblair/sticky-notes" class="project-link">Github Repo</a>
+                                    <p class="project-info">built using class-based components in React</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h4 class="title">
+                                    <span>Hotels Search</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </h4>
+                                <div id="content">
+                                    <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a sticky notes web application" />
+                                    <a href="" class="project-link">Live Site</a>
+                                    <a href="" class="project-link">Github Repo</a>
+                                    <p class="project-info">React</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h4 class="title">
+                                    <span>Guess the Word</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </h4>
+                                <div id="content">
+                                    <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a sticky notes web application" />
+                                    <a href="" class="project-link">Live Site</a>
+                                    <a href="" class="project-link">Github Repo</a>
+                                    <p class="project-info">vanilla JS</p>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h4 class="title">
+                                    <span>Unplugged</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </h4>
+                                <div id="content">
+                                    <img src="./img/headshot-icon-crop.jpg" class="project-img" alt="Screenshot of a sticky notes web application" />
+                                    <a href="" class="project-link">Live Site</a>
+                                    <a href="" class="project-link">Github Repo</a>
+                                    <p class="project-info">responsive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- contact -->
+                <footer class="contact"></footer>
             
         </main>
-
     </body>
-
 </html>
