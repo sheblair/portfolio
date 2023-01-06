@@ -25,6 +25,10 @@ body {
   font-family: "Azeret Mono", sans-serif;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 /* header */
 header {
   width: 100%;
@@ -103,6 +107,11 @@ main {
   font-family: "Azeret Mono", sans-serif;
 }
 
+.lately {
+  margin: 30px 80px 0 0;
+  font-style: italic;
+}
+
 /* profile */
 .profile {
   width: 35%;
@@ -128,7 +137,7 @@ main {
 .skills {
   padding-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .skills > h4 {
@@ -142,7 +151,7 @@ main {
 }
 
 .skills-section {
-  padding-right: 10px;
+  padding-right: 50px;
 }
 
 /* projects */
@@ -156,10 +165,10 @@ main {
 }
 
 .projects .accordion {
-  padding: 4rem 0 2rem 0;
+  padding: 10px 0;
 }
 .projects .accordion-item {
-  padding: 0.5rem 0;
+  padding: 5px 0;
   margin: 0;
   overflow: hidden;
   border: none;
@@ -183,12 +192,11 @@ main {
   transition: transform 0.5s ease;
 }
 .projects .accordion-item #content {
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: inherit;
-  color: black;
-  padding: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  padding: 5px 0 3px 0;
+  border-radius: 10px;
   overflow: hidden; /* Hide the element content, while height = 0 */
   height: 0;
   opacity: 0;
@@ -205,7 +213,20 @@ main {
 }
 
 #content img {
-  max-width: 100%;
+  max-width: 50%;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.content-text {
+  padding: 0 0 20px 20px;
+}
+
+.content-text > a {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: blue;
+  line-height: 2rem;
 }
 
 /* contact */
