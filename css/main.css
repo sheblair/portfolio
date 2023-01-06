@@ -61,7 +61,7 @@ nav > ul > li > a {
   font-family: "Syne", sans-serif;
   font-size: 1.2rem;
   text-decoration: none;
-  color: black;
+  color: #232040;
 }
 
 main {
@@ -76,7 +76,7 @@ main {
 }
 
 /* about */
-.about {
+#about {
   width: 65%;
   padding-right: 30px;
 }
@@ -103,7 +103,6 @@ main {
 
 .about-me > p > a {
   text-decoration: underline;
-  color: black;
   font-family: "Azeret Mono", sans-serif;
 }
 
@@ -154,8 +153,8 @@ main {
   padding-right: 50px;
 }
 
-/* projects */
-.projects-main {
+/* work */
+#work {
   width: 100%;
   margin-bottom: 20px;
 }
@@ -166,9 +165,11 @@ main {
 
 .projects .accordion {
   padding: 10px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
 }
 .projects .accordion-item {
-  padding: 5px 0;
+  padding: 15px 0;
   margin: 0;
   overflow: hidden;
   border: none;
@@ -178,16 +179,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
   line-height: inherit;
+  font-family: "Azeret Mono", sans-serif;
   cursor: pointer;
-  color: black;
 }
 .projects .accordion-item .title i.fa-chevron-down {
   font-size: 0.9rem;
-  color: black;
   transform: translateX(-50%) rotate(90deg);
   transition: transform 0.5s ease;
 }
@@ -227,6 +224,11 @@ main {
   text-decoration: underline;
   color: blue;
   line-height: 2rem;
+}
+
+.project-info {
+  margin-top: 10px;
+  text-transform: none;
 }
 
 /* contact */
