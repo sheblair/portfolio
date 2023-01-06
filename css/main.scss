@@ -104,6 +104,7 @@ main {
 
 .about-me > p > a {
     text-decoration: underline;
+    color: #232040;
     font-family: 'Azeret Mono', sans-serif;
 }
 
@@ -162,7 +163,8 @@ main {
 }
 
 .projects-heading {
-    margin-bottom: 15px;
+    font-family: 'Azeret Mono', sans-serif;
+    font-weight: 600;
 }
 
 .projects {
@@ -184,6 +186,7 @@ main {
                 align-items: center;
                 line-height: inherit;
                 font-family: 'Azeret Mono', sans-serif;
+                font-weight: normal;
                 cursor: pointer;
         
                 i.fa-chevron-down {
@@ -248,4 +251,36 @@ main {
 }
 
 /* contact */
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
 
+.contact-heading {
+    font-family: 'Azeret Mono', sans-serif;
+    font-weight: 700;
+}
+
+.contact-links {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.contact-link > a {
+    text-decoration: none;
+    color:#232040;
+    padding: 0 10px;
+    letter-spacing: .1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .9rem;
+}
+
+.copyright {
+    font-size: .8rem;
+    font-family: 'Courier New', Courier, monospace;
+}

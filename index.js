@@ -1,4 +1,4 @@
-// accordion menu
+// accordion menu for projects
 const accordionItems = document.querySelectorAll(".accordion-item");
 
 accordionItems.forEach((el) =>
@@ -6,33 +6,11 @@ accordionItems.forEach((el) =>
     if (el.classList.contains("active")) {
       el.classList.remove("active");
     } else {
-      accordionItems.forEach((el2) => el2.classList.remove("active"));
+      accordionItems.forEach((el) => el.classList.remove("active"));
       el.classList.add("active");
     }
   })
 );
 
-
-
-// trying to write a for loop 
-
-// const arrow = document.querySelector("i");
-// const content = document.querySelector("#content")
-
-
-// for (let i = 0; i < accordionItems.length; i++) {
-//     let item = accordionItems[i];
-
-//     item.addEventListener("click", () => {
-//         let arrows = document.querySelectorAll(".fa-chevron-down");
-//         for (let i = item; i < arrows.length; i++) {
-//             let arrow = arrows[i]
-//             if (arrow.classList.contains("active")) {
-//                 arrow.classList.remove("active")
-//             } else {
-//                 arrow.classList.add("active")
-//             }
-//         }
-
-//     })
-// }
+// update copyright year to current year
+document.querySelector(".copyright").innerText = `© ${new Date().getFullYear()} sheila blair`;
