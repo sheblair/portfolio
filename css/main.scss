@@ -13,8 +13,6 @@
 }
 
 body {
-    background-color: var(--light);
-    color: var(--dark);
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     margin: 0 auto;
@@ -23,15 +21,90 @@ body {
     width: 90%;
 }
 
+.light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.light-link {
+    color: var(--light);
+}
+
+.dark-link {
+    color: var(--dark);
+}
+
 .underline {
     text-decoration: underline;
-}
+} 
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 40px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: var(--dark);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: var(--light);
+    bottom: 4px;
+    content: "";
+    height: 13px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 13px;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--light);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+    background-color: var(--dark);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
 
 /* mobile styles */
 
 /* header */
 .header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
@@ -52,7 +125,6 @@ body {
 }
  
 .nav-bar > ul > li > a {
-    color: var(--dark);
     font-family: 'Azeret Mono', sans-serif;
     font-size: .8rem;
     text-decoration: none;
@@ -87,7 +159,6 @@ body {
 }
 
 .about-me > p > a {
-    color: var(--dark);
     font-family: 'Azeret Mono', sans-serif;
     text-decoration: underline;
 }
@@ -177,7 +248,6 @@ body {
             &.active {                
                 .title {                    
                     i.fa-chevron-down {
-                        color: var(--link-blue);
                         transform: translateX(-50%) rotate(0);
                     }
                                      }
@@ -197,7 +267,6 @@ body {
 }
 
 .content-text > a {
-    color: var(--link-blue);
     font-size: 1rem;
     line-height: 2rem;
     text-decoration: underline;
@@ -230,7 +299,6 @@ body {
 }
 
 .contact-link > a {
-    color: var(--dark);
     font-family: 'Azeret Mono', sans-serif;
     font-size: .8rem;
     font-weight: 300;
@@ -247,8 +315,7 @@ body {
 
 /* tablet styles */
 
-@media screen and (min-width: 768px) {
-    
+@media screen and (min-width: 768px) {    
     .header {
         align-items: center;
         display: flex;
@@ -261,6 +328,10 @@ body {
 
     .nav-bar > ul > li {
         margin: 0 20px 0 0
+    }
+
+    .theme-switch-wrapper {
+        margin: 2px 0 0 0;
     }
 
     .profile {
@@ -288,27 +359,27 @@ body {
     .contact-heading {
         margin-right: auto;
     }
-}
+     }
 
 
   /* desktop styles */
-@media screen and (min-width: 848px) {
-    
+@media screen and (min-width: 848px) {    
     /* header */
     .header {
         align-items: center;
         display: flex;
+        margin: 20px 0 70px 0
     }
     .name {
         font-size: 2rem;
-        margin: 20px auto 0 0;
+        margin: 0 auto 0 0;
     }
 
     .nav-bar {
         align-items: center;
         display: flex;
         justify-content: flex-start;
-        margin-top: 20px;
+        margin: 0 20px 0 0;
     }
     .nav-bar > ul > li {
         margin: 0 0 0 20px;
@@ -331,6 +402,11 @@ body {
         padding-right: 70px;
         width: 65%;
     }
+
+    .about-me-heading {
+        padding-bottom: 50px;
+    }
+
     /* profile */
     .profile {
         flex-flow: column;
@@ -346,16 +422,14 @@ body {
     }
     /* work */
     .projects {    
-        .accordion {
-            
-            &-item {
-                
+        .accordion {            
+            &-item {                
                 #content {
                     align-items: flex-end;
                     flex-flow: row wrap;
                 }
-            }
-        }
+                             }
+                     }
          }
     #content img {
         border-radius: 15px;
@@ -364,6 +438,7 @@ body {
     }
     .content-text {
         padding: 0 0 20px 20px;
+        width: 50%;
     }
 
     /* contact */
@@ -379,4 +454,4 @@ body {
     .copyright {
         margin: 0;
     }
-}
+     }
