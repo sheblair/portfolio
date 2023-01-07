@@ -13,4 +13,7 @@ accordionItems.forEach((el) =>
 );
 
 // update copyright year to current year
-document.querySelector(".copyright").innerText = `© ${new Date().getFullYear()} sheila blair`;
+const copyright = document.querySelector(".copyright");
+const currentYear = new Date().getFullYear()
+
+copyright.innerText = `hand-coded by sheila blair ©${currentYear}`;

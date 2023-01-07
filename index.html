@@ -3,9 +3,13 @@
 
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>portfolio</title>
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        
         <script src="./index.js" defer></script>
         <script src="https://kit.fontawesome.com/fb23e24526.js" crossorigin="anonymous"></script>
 
@@ -20,10 +24,10 @@
     </head>
 
     <body>
-        <header>    
-        <h1>sheila blair</h1>
+        <header class="header">    
+        <h1 class="name">sheila blair</h1>
     <!-- nav bar -->
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href="#work">work</a></li>
                 <li><a href="#contact">contact</a></li>
@@ -36,7 +40,7 @@
                 <!-- about -->
                 <section id="about">
                     <article class="about-me">
-                        <h2 class="heading">hi! i'm a front-end developer who wants to work with you ☻</h2>
+                        <h2 class="about-me-heading">hi! i'm a front-end developer who wants to work with you ☻</h2>
                         <p>like many millennials, i first experimented with coding while editing myspace pages 
                             and tumblr themes back in the early aughts. since then, i've picked up front-end 
                             programming as a professional skillset, building both static sites as well as robust 
@@ -51,9 +55,6 @@
                             make new connections, or hear about what you're working on. for more
                             more information about me, you can also check out my <a href="" target="_blank">resume</a>.
                         </p>
-                        <!-- <p class="lately"><span class="underline">a few things i've been drawn to lately:</span><br> lowercase letters, christmas tree lights, 
-                            this color, the Arc browser, albums instead of playlists
-                        </p> -->
                     </article>
                 </section>
 
@@ -64,8 +65,8 @@
                         <section class="skills-section">
                             <h4 class="skills-title">skills</h4>
                             <ul class="skills-list">
-                                <li class="skills-list-item">HTML & CSS</li>
-                                <li class="skills-list-item">SASS</li>
+                                <li class="skills-list-item">HTML</li>
+                                <li class="skills-list-item">CSS & SASS</li>
                                 <li class="skills-list-item">React</li>
                                 <li class="skills-list-item">JavaScript</li>
                                 <li class="skills-list-item">Git / CLI</li>
@@ -81,12 +82,6 @@
                                 <li class="skills-list-item">Code Sandbox</li>
                             </ul>
                         </section>
-                        <!-- <section class="skills-section">
-                            <h4 class="skills-title">favorites</h4>
-                            <ul class="skills-list">
-                                <li class="skills-list-item">fave color</li>
-                            </ul>
-                        </section> -->
                     </aside>
                 </section>
             </section>
@@ -94,25 +89,24 @@
             <!-- projects -->
             <section id="work">
                 <h2 class="projects-heading">my work:</h2>
-
-                <section class="projects">
-                    <div class="accordion">
-                        <div class="accordion-item">
-                            <h2 class="title">
-                                <span>Sticky Notes App</span>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </h2>
-                            <div id="content">
-                                <img src="./img/sticky-notes-shrek.png" class="project-img" alt="Screenshot of a sticky notes web application" />
-                                <div class="content-text">
-                                    <a href="https://stickynotes-sb.netlify.app" target="_blank" project-link">Live Site</a>
-                                    <br>
-                                    <a href="https://github.com/sheblair/sticky-notes" target="_blank" class="project-link">Github Repo</a>
-                                    <p class="project-info">A note-taking app built in React</p>
+                    <section class="projects">
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="title">
+                                    <span>Sticky Notes App</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </h2>
+                                <div id="content">
+                                    <img src="./img/sticky-notes-shrek.png" class="project-img" alt="Screenshot of a sticky notes web application" />
+                                    <div class="content-text">
+                                        <a href="https://stickynotes-sb.netlify.app" target="_blank" project-link">Live Site</a>
+                                        <br>
+                                        <a href="https://github.com/sheblair/sticky-notes" target="_blank" class="project-link">Github Repo</a>
+                                        <p class="project-info">A note-taking app built in React</p>
+                                    </div>
+                                    
                                 </div>
-                                
                             </div>
-                        </div>
 
                         <div class="accordion-item">
                             <h2 class="title">
@@ -168,14 +162,14 @@
 
             <!-- contact -->
             <footer id="contact">
-                <h3 class="contact-heading">contact --></h3>
+                <h3 class="contact-heading">contact me --></h3>
                 <ul class="contact-links">
                     <li class="contact-link"><a href="mailto:sheilablair92@gmail.com" target="_blank" rel="noopener noreferrer">[email]</a></li>
                     <li class="contact-link"><a href="https://github.com/sheblair" target="_blank">[github]</a></li>
                     <li class="contact-link"><a href="https://are.na/66-99" target="_blank">[arena]</a></li>
-                    <li class="contact-link"><a href="https://twitter.com/she_blair" target="_blank">[twitter]</a></li>
+                    <li class="contact-link"><a href="" target="_blank">[linkedin]</a></li>
                 </ul>
-                <p class="copyright"></p>
+                <p class="copyright">hand-coded by sheila blair</p>
             </footer>
             
         </main>
