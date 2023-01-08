@@ -44,8 +44,8 @@ body {
 }
 
 .theme-switch-wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-top: 20px;
 }
 
@@ -87,8 +87,8 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(20px);
   background-color: var(--dark);
+  transform: translateX(20px);
 }
 
 .slider.round {
