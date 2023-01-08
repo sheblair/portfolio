@@ -220,7 +220,7 @@ input:checked + .slider:before {
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-family: "Inter", sans-serif;
+  font-family: "Azeret Mono", sans-serif;
   font-weight: normal;
   justify-content: space-between;
   line-height: inherit;
@@ -230,7 +230,7 @@ input:checked + .slider:before {
   transform: translateX(-50%) rotate(90deg);
   transition: transform 0.5s ease;
 }
-.projects .accordion-item #content {
+.projects .accordion-item .content {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -243,13 +243,13 @@ input:checked + .slider:before {
 .projects .accordion-item.active .title i.fa-chevron-down {
   transform: translateX(-50%) rotate(0);
 }
-.projects .accordion-item.active #content {
+.projects .accordion-item.active .content {
   height: auto;
   opacity: 1;
   transition: height 0ms 0ms, opacity 600ms 0ms;
 }
 
-#content img {
+.content img {
   max-width: 100%;
   padding: 10px 0;
 }
@@ -368,7 +368,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
   }
-  .top-section {
+  .top-half {
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 100px;
@@ -393,11 +393,11 @@ input:checked + .slider:before {
     margin-left: 0;
   }
   /* work */
-  .projects .accordion-item #content {
+  .projects .accordion-item .content {
     align-items: flex-end;
     flex-flow: row wrap;
   }
-  #content img {
+  .content img {
     border-radius: 15px;
     max-width: 50%;
     padding: 10px;
