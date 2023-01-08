@@ -1,16 +1,27 @@
-// accordion menu for projects
+// accordion menu arrows
 const accordionItems = document.querySelectorAll(".accordion-item");
 
-accordionItems.forEach((el) =>
-  el.addEventListener("click", () => {
-    if (el.classList.contains("active")) {
-      el.classList.remove("active");
-    } else {
-      accordionItems.forEach((el) => el.classList.remove("active"));
-      el.classList.add("active");
-    }
+// accordionItems.forEach((el) =>
+//   el.addEventListener("click", () => {
+//     let arrows = document.querySelectorAll(".fa-chevron-down");
+//     let arrow = arrow
+//     if (arrow.classList.contains("active")) {
+//       arrow.classList.remove("active");
+//     } else {
+//       arrow.classList.add("active");
+//     }
+//   })
+// );
+
+for (let i = 0; i < accordionItems.length; i++) {
+  let item = accordionItems[i];
+
+  item.addEventListener("click", () => {
+    let arrows = document.querySelectorAll(".fa-chevron-down");
+    let arrow = arrows[i];
+    arrow.classList.toggle("active");
   })
-);
+}
 
 // update copyright year to current year
 const copyright = document.querySelector(".copyright");
