@@ -1,24 +1,13 @@
 // accordion menu arrows
 const accordionItems = document.querySelectorAll(".accordion-item");
 
-// accordionItems.forEach((el) =>
-//   el.addEventListener("click", () => {
-//     let arrows = document.querySelectorAll(".fa-chevron-down");
-//     let arrow = arrow
-//     if (arrow.classList.contains("active")) {
-//       arrow.classList.remove("active");
-//     } else {
-//       arrow.classList.add("active");
-//     }
-//   })
-// );
-
 for (let i = 0; i < accordionItems.length; i++) {
   let item = accordionItems[i];
 
   item.addEventListener("click", () => {
     let arrows = document.querySelectorAll(".fa-chevron-down");
     let arrow = arrows[i];
+    console.log(arrow);
     arrow.classList.toggle("active");
   })
 }
