@@ -19,12 +19,13 @@ const currentYear = new Date().getFullYear()
 copyright.innerText = `hand-coded by sheila blair ©${currentYear}`;
 
 // dark mode toggle
-const toggle = document.querySelector('.theme-switch');
+const toggle = document.querySelector('.checkbox');
 const body = document.querySelector("body");
 const links = document.querySelectorAll("a")
+const skillsCard = document.getElementById("skills")
 
-
-toggle.addEventListener('input', () => {
+function handleClick() {
+  // toggle dark mode on body
   if (body.classList.contains("light")) {
     body.classList.remove("light")
     body.classList.add("dark")
@@ -33,6 +34,7 @@ toggle.addEventListener('input', () => {
     body.classList.add("light")
   }
 
+  // toggle dark mode on links
   links.forEach((a) => {
     if (a.classList.contains("dark-link")) {
       a.classList.remove("dark-link")
@@ -42,5 +44,17 @@ toggle.addEventListener('input', () => {
       a.classList.add("dark-link")
     }
   })
-});
 
+  //toggle dark mode on skills card
+  if (skillsCard.classList.contains("light-card")) {
+    skillsCard.classList.remove("light-card")
+    skillsCard.classList.add("dark-card")
+  } else {
+    skillsCard.classList.remove("dark-card")
+    skillsCard.classList.add("light-card")
+  }
+}
+
+toggle.addEventListener("click", () => {
+  handleClick();
+})

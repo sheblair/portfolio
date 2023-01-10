@@ -29,20 +29,19 @@
     <!-- nav bar -->
         <nav class="nav-bar">
             <ul>
+                <li><a href="#skills" class="dark-link">skills</a></li>
                 <li><a href="#work" class="dark-link">work</a></li>
                 <li><a href="#contact" class="dark-link">contact</a></li>
             </ul>
         </nav>
         <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox" title="Dark Mode Toggle Switch">
-                <input type="checkbox" id="checkbox">
-                <div class="slider round"></div>
-            </label>
+            <input type="checkbox" id="switch" class="checkbox">
+            <label for="switch" class="toggle"></label>
         </div>    
         </header>
 
         <main>
-            <div class="top-half">
+            <div class="top-section">
                 <!-- about -->
                 <div id="about">
                     <article class="about-me">
@@ -66,31 +65,28 @@
 
                 <!-- profile -->
                 <div class="profile">
-                    <img src="./img/reflection-1-crop.png" alt="Profile picture of site creator">
-                    <aside class="skills">
-                        <div class="skills-section">
-                            <h4 class="skills-title">skills</h4>
-                            <ul class="skills-list">
-                                <li class="skills-list-item">HTML</li>
-                                <li class="skills-list-item">CSS & SASS</li>
-                                <li class="skills-list-item">React</li>
-                                <li class="skills-list-item">JavaScript</li>
-                                <li class="skills-list-item">Git / CLI</li>
-                            </ul>
-                        </div>
-                        <div class="skills-section">
-                            <h4 class="skills-title">tools</h4>
-                            <ul class="skills-list">
-                                <li class="skills-list-item">Figma</li>
-                                <li class="skills-list-item">Netlify</li>
-                                <li class="skills-list-item">Vite</li>
-                                <li class="skills-list-item">VS Code</li>
-                                <li class="skills-list-item">Code Sandbox</li>
-                            </ul>
-                        </div>
-                    </aside>
+                    <img src="./img/reflection-1-crop-min.png" alt="Profile picture of site creator">   
                 </div>
             </div>
+
+            <!-- skills -->
+            <div id="skills" class="light-card">
+                <div class="skills-section">
+                    <h4 class="skills-title">skills</h4>
+                    <p class="skills-list">
+                        HTML5, CSS3, JavaScript, React.js, Sass, Flexbox & CSS Grid, JSX, ES6, Git & the command line, 
+                        version control, Node.js, APIs, managing data flow, media queries, responsive typography
+                    </p>
+                </div>         
+                <div class="skills-section">
+                    <h4 class="skills-title">tools</h4>
+                    <p class="skills-list">
+                        Visual Studio Code, Code Sandbox, Chrome DevTools, Github, Figma, Photoshop, Vite, Netlify
+                    </p>
+                </div>
+            </div> 
+                
+            
                 
             <!-- projects -->
             <div id="work">
@@ -123,7 +119,7 @@
                             <div class="accordion-panel">
                                 <img src="./img/hotels-feature.png" class="project-img" alt="Screenshot of a search feature on a hotel booking website">
                                 <div class="content-text">
-                                    <a href="https://codesandbox.io/s/hotels-search-feature-d4erw0" target="_blank" class="project-link dark-link">Code Sandbox</a>
+                                    <a href="https://zxh1n8.csb.app/" target="_blank" class="project-link dark-link">Code Sandbox</a>
                                     <br>
                                     <!-- <a href="" class="project-link">Github Repo</a> -->
                                     <p class="project-info">This is a search feature for a hotel booking website, built in Code Sandbox using React.</p>

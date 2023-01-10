@@ -2,6 +2,8 @@
 :root, html {
     --dark: #352020;
     --light: #F6F6E5;
+    --light-card-bg: #C6D2C2;
+    --dark-card-bg: #1a0909;
     --link-blue: blue;
     font-size: 16px;
 }
@@ -39,66 +41,22 @@ body {
     color: var(--dark);
 }
 
+.dark-card {
+    background-color: var(--dark-card-bg);
+    color: var(--light);
+}
+
+.light-card {
+    background-color: var(--light-card-bg);
+}
+
 .underline {
     text-decoration: underline;
 } 
 
-.theme-switch-wrapper {
-    align-items: center;
-    display: flex;
-    margin-top: 20px;
+.top-section {
+    margin-bottom: 30px;
 }
-
-.theme-switch {
-    display: inline-block;
-    height: 20px;
-    position: relative;
-    width: 40px;
-}
-  
-.theme-switch input {
-    display:none;
-}
-  
-.slider {
-    background-color: var(--dark);
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-  
-.slider:before {
-    background-color: var(--light);
-    bottom: 4px;
-    content: "";
-    height: 13px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 13px;
-}
-  
-input:checked + .slider {
-    background-color: var(--light);
-}
-  
-input:checked + .slider:before {
-    background-color: var(--dark);
-    transform: translateX(20px);
-}
-  
-.slider.round {
-    border-radius: 34px;
-}
-  
-  .slider.round:before {
-    border-radius: 50%;
-}
-  
 
 /* mobile styles */
 /* header */
@@ -114,8 +72,13 @@ input:checked + .slider:before {
     margin: 0 auto;
 }
 
+.nav-bar {
+    margin-bottom: 15px;
+}
+
 .nav-bar > ul {
     display: flex;
+    padding: 0;
 }
 
 .nav-bar > ul > li {
@@ -127,6 +90,42 @@ input:checked + .slider:before {
     font-family: 'Azeret Mono', sans-serif;
     font-size: .8rem;
     text-decoration: none;
+}
+
+/* dark mode toggle */
+.toggle {
+    position: relative ;
+    display: inline-block;
+    width: 39px;
+    height: 19px;
+    background-color: var(--dark);
+    border-radius: 30px;
+    border: none;
+}
+       
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--light);
+    transition:  all 0.5s;
+    bottom: 2px;
+    left: 2px;
+}
+       
+.checkbox:checked + .toggle::after {
+    transform: translateX(20px);
+    background-color: var(--dark);
+}
+
+.checkbox:checked + .toggle {
+    background-color: var(--light);
+}
+       
+.checkbox {
+    display: none;
 }
 
 /* about */
@@ -164,9 +163,6 @@ input:checked + .slider:before {
 
 /* profile */
 .profile {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
     width: 100%;
 }
 
@@ -174,36 +170,38 @@ input:checked + .slider:before {
     max-width: 100%;
 }
 
-.skills {
+/* skills */
+#skills {
+    margin-bottom: 30px;
     display: flex;
-    justify-content: flex-start;
-    padding-top: 30px;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.skills-section {
+    padding: 20px;
 }
 
 .skills-section > h4 {
     margin-bottom: 5px;
+    font-family: 'Azeret Mono';
+    font-weight: 600;
 }
 
 .skills-list {
-    line-height: 1.35rem;
-    list-style-type: none;
-    padding-bottom: 20px;
-}
-
-.skills-section {
-    padding-right: 50px;
+    line-height: 1.45rem;
+    text-transform: none;
 }
 
 /* work */
 #work {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
 .projects-heading {
     font-family: 'Azeret Mono', sans-serif;
     font-weight: 600;
-    margin-bottom: 20px;
 }
 
 details summary::-webkit-details-marker { 
@@ -225,7 +223,7 @@ details[open] summary {
 
 .title h2 {
     font-family: 'Azeret Mono', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .title {
@@ -274,7 +272,7 @@ details[open] summary {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
 }
 
@@ -316,29 +314,30 @@ details[open] summary {
         margin: 0 auto 0 0;
     }
 
+    .nav-bar {
+        margin-bottom: 0;
+    }
+
     .nav-bar > ul > li {
         margin: 0 20px 0 0
     }
 
     .theme-switch-wrapper {
-        margin: 2px 0 0 0;
+        margin: 6px 0 0 0;
     }
 
-    .profile {
-        flex-flow: row wrap;
-        justify-content: flex-start;
-    }
-
+    /* profile */
     .profile img {
-        max-width: 50%;
+        min-width: 100%;
     }
 
-    .skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-left: 30px;
-        padding-top: 30px;
+    /* skills */
+    #skills {
+        flex-direction: row;
+    }
+    
+    .skills-section {
+        width: 50%;
     }
 
     /* work */
@@ -359,6 +358,7 @@ details[open] summary {
         width: 50%;
     }
 
+    /* footer */
     #contact {
         flex-flow: row wrap;
         justify-content: center;
@@ -371,13 +371,14 @@ details[open] summary {
 
 
   /* desktop styles */
-@media screen and (min-width: 848px) {    
+@media screen and (min-width: 848px) {  
     /* header */
     .header {
         align-items: center;
         display: flex;
         margin: 20px 0 70px 0
     }
+
     .name {
         font-size: 2rem;
         margin: 0 auto 0 0;
@@ -389,26 +390,30 @@ details[open] summary {
         justify-content: flex-start;
         margin: 0 20px 0 0;
     }
+
     .nav-bar > ul > li {
         margin: 0 0 0 20px;
     }
     .nav-bar > ul > li > a {
         font-size: 1rem;
     }
+
     /* about */
     main {
         display: flex;
         flex-direction: column;
     }
-    .top-half {
+
+    .top-section {
         display: flex;
         flex-flow: row wrap;
-        margin-bottom: 100px;
+        margin-bottom: 0px;
     }
 
     #about {
         padding-right: 70px;
         width: 65%;
+        margin-bottom: 30px;
     }
 
     .about-me-heading {
@@ -417,19 +422,23 @@ details[open] summary {
 
     /* profile */
     .profile {
-        flex-flow: column;
         width: 35%;
+        margin-bottom: 20px;
     }
     .profile img {
         max-width: 100%;
     }
 
-    .skills {
-        flex-flow: row wrap;
-        margin-left: 0;
+    /* work */
+    .title {
+        justify-content: flex-start;
     }
 
-    /* contact */
+    .title h2 {
+        margin-right: 40px;
+    }
+
+    /* footer */
     #contact {
         flex-flow: row wrap;
         justify-content: space-between;
