@@ -72,6 +72,11 @@ body {
     margin: 0 auto;
 }
 
+.name a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
 .nav-bar {
     margin-bottom: 15px;
 }
