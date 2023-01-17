@@ -1,9 +1,9 @@
 /* base styles */
 :root, html {
-    --dark: #352020;
-    --light: #F6F6E5;
-    --light-card-bg: #C6D2C2;
     --dark-card-bg: #1a0909;
+    --dark: #352020;
+    --light-card-bg: #C6D2C2;
+    --light: #F6F6E5;
     --link-blue: blue;
     font-size: 16px;
 }
@@ -98,30 +98,30 @@ body {
 
 /* dark mode toggle */
 .toggle {
-    position: relative ;
-    display: inline-block;
-    width: 39px;
-    height: 19px;
     background-color: var(--dark);
     border-radius: 30px;
     border: none;
+    display: inline-block;
+    height: 19px;
+    position: relative ;
+    width: 39px;
 }
        
 .toggle:after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
     background-color: var(--light);
-    transition:  all 0.5s;
+    border-radius: 50%;
     bottom: 2px;
+    content: '';
+    height: 15px;
     left: 2px;
+    position: absolute;
+    transition:  all 0.5s;
+    width: 15px;
 }
        
 .checkbox:checked + .toggle::after {
-    transform: translateX(20px);
     background-color: var(--dark);
+    transform: translateX(20px);
 }
 
 .checkbox:checked + .toggle {
@@ -176,10 +176,10 @@ body {
 
 /* skills */
 #skills {
-    margin-bottom: 30px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    margin-bottom: 30px;
 }
 
 .skills-section {
@@ -187,9 +187,9 @@ body {
 }
 
 .skills-section > h4 {
-    margin-bottom: 5px;
     font-family: 'Azeret Mono';
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .skills-list {
@@ -208,9 +208,9 @@ body {
     font-weight: 600;
 }
 
-details summary::-webkit-details-marker { 
-    display:none; 
-}
+details summary::-webkit-details-marker {
+      display:none;
+  }
 
 .accordion-item {
     padding: 20px 0;
@@ -231,9 +231,9 @@ details[open] summary {
 }
 
 .title {
-    display: flex;
     align-items: center;
     cursor: pointer;
+    display: flex;
     display: flex;
     justify-content: space-between;
 }
@@ -339,16 +339,15 @@ details[open] summary {
     #skills {
         flex-direction: row;
     }
-    
     .skills-section {
         width: 50%;
     }
 
     /* work */
     .accordion-panel {
+        align-items: flex-end;
         display: flex;
         flex-flow: row wrap;
-        align-items: flex-end;
     }
 
     .accordion-panel img {
@@ -371,7 +370,7 @@ details[open] summary {
     .contact-heading {
         margin-right: auto;
     }
-}
+     }
 
 
   /* desktop styles */
@@ -415,9 +414,9 @@ details[open] summary {
     }
 
     #about {
+        margin-bottom: 30px;
         padding-right: 70px;
         width: 65%;
-        margin-bottom: 30px;
     }
 
     .about-me-heading {
@@ -426,8 +425,8 @@ details[open] summary {
 
     /* profile */
     .profile {
-        width: 35%;
         margin-bottom: 20px;
+        width: 35%;
     }
     .profile img {
         max-width: 100%;
@@ -455,4 +454,4 @@ details[open] summary {
     .copyright {
         margin: 0;
     }
-     }
+   }
