@@ -1,4 +1,4 @@
-// accordion menu arrows
+// toggle accordion menu arrows
 const accordionItems = document.querySelectorAll(".accordion-item");
 
 for (let i = 0; i < accordionItems.length; i++) {
@@ -7,7 +7,6 @@ for (let i = 0; i < accordionItems.length; i++) {
   item.addEventListener("click", () => {
     let arrows = document.querySelectorAll(".fa-chevron-down");
     let arrow = arrows[i];
-    console.log(arrow);
     arrow.classList.toggle("active");
   })
 }
@@ -19,42 +18,42 @@ const currentYear = new Date().getFullYear()
 copyright.innerText = `hand-coded by sheila blair ©${currentYear}`;
 
 // dark mode toggle
-const toggle = document.querySelector('.checkbox');
+const toggle = document.querySelector(".checkbox");
+const toggleWrapper = document.querySelector(".toggle")
 const body = document.querySelector("body");
-const links = document.querySelectorAll("a")
+const links = document.querySelectorAll(".link")
 const skillsCard = document.getElementById("skills")
+let darkMode = localStorage.getItem("dark-mode");
 
-function handleClick() {
-  // toggle dark mode on body
-  if (body.classList.contains("light")) {
-    body.classList.remove("light")
-    body.classList.add("dark")
-  } else {
-    body.classList.remove("dark")
-    body.classList.add("light")
-  }
-
-  // toggle dark mode on links
-  links.forEach((a) => {
-    if (a.classList.contains("dark-link")) {
-      a.classList.remove("dark-link")
-      a.classList.add("light-link")
-    } else {
-      a.classList.remove("light-link")
-      a.classList.add("dark-link")
-    }
-  })
-
-  //toggle dark mode on skills card
-  if (skillsCard.classList.contains("light-card")) {
-    skillsCard.classList.remove("light-card")
-    skillsCard.classList.add("dark-card")
-  } else {
-    skillsCard.classList.remove("dark-card")
-    skillsCard.classList.add("light-card")
-  }
+if (darkMode === "enabled") {
+  enableDarkMode(); // set state of darkMode on page load
 }
 
-toggle.addEventListener("click", () => {
-  handleClick();
+function enableDarkMode() {
+  links.forEach((link) => {
+      link.classList.add("dark-link")
+  })
+  body.classList.add("dark")
+  skillsCard.classList.add("dark-card")
+  localStorage.setItem("dark-mode", "enabled")
+}
+
+function disableDarkMode() {
+  links.forEach((link) => {
+      link.classList.remove("dark-link")
+  })
+  body.classList.remove("dark")
+  skillsCard.classList.remove("dark-card")
+  localStorage.setItem("dark-mode", "disabled")
+}
+
+toggle.addEventListener("click", (e) => {
+    darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+    if (darkMode === "disabled") {
+      enableDarkMode();
+      toggleWrapper.classList.add("dark-toggle")
+    } else {
+      disableDarkMode();
+    }
 })
+

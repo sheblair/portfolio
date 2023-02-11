@@ -21,9 +21,6 @@ body {
     padding: 30px 0;
     text-transform: lowercase;
     width: 90%;
-}
-
-.light {
     background-color: var(--light);
     color: var(--dark);
 }
@@ -33,21 +30,22 @@ body {
     color: var(--light);
 }
 
-.light-link {
-    color: var(--light);
+.link {
+    color: var(--dark)
 }
 
 .dark-link {
+    color: var(--light);
+}
+
+.card {
+    background-color: var(--light-card-bg);
     color: var(--dark);
 }
 
 .dark-card {
     background-color: var(--dark-card-bg);
     color: var(--light);
-}
-
-.light-card {
-    background-color: var(--light-card-bg);
 }
 
 .underline {
@@ -97,6 +95,18 @@ body {
 }
 
 /* dark mode toggle */
+.dark-toggle {
+    background-color: var(--light);
+    /* border-radius: 50%;
+    bottom: 2px;
+    content: '';
+    height: 15px;
+    left: 2px;
+    position: absolute;
+    transition:  all 0.5s;
+    width: 15px; */
+}
+
 .toggle {
     background-color: var(--dark);
     border-radius: 30px;
@@ -105,18 +115,6 @@ body {
     height: 19px;
     position: relative ;
     width: 39px;
-}
-       
-.toggle:after {
-    background-color: var(--light);
-    border-radius: 50%;
-    bottom: 2px;
-    content: '';
-    height: 15px;
-    left: 2px;
-    position: absolute;
-    transition:  all 0.5s;
-    width: 15px;
 }
        
 .checkbox:checked + .toggle::after {
